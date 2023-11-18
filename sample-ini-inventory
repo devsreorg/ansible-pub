@@ -1,0 +1,26 @@
+# Simple
+target_01 ansible_host=172.31.2.177
+target_02 ansible_host=172.31.13.151
+
+# With protocol
+target_03 ansible_host=172.31.3.50 ansible_connection=ssh
+target_04 ansible_host=172.31.3.50 ansible_connection=winrm
+
+# Only localhost
+localhost ansible_connection=localhost
+
+# With port numbers
+target_05 ansible_host=172.31.3.55 ansible_connection=ssh ansible_port=22
+target_06 ansible_host=172.31.3.50 ansible_connection=winrm ansible_port=5986
+
+# With ssh username and password (not recommended)
+target_07 ansible_host=172.31.3.60 ansible_connection=ssh ansible_user=ubuntu ansible_ssh_pass=P@assword
+
+# With groups; refer to default /etc/ansible/hosts for more examples
+[webservers]
+target_01
+target_02
+
+[dbservers]
+target_03
+target_04
