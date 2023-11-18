@@ -1,0 +1,11 @@
+web1 ansible_host=172.20.1.100
+web2 ansible_host=172.20.1.101
+web3 ansible_host=172.20.1.102
+
+[web_servers]
+web1
+Web2
+web3
+
+[web_servers:vars]
+nameserver=8.8.8.8

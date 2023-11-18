@@ -1,6 +1,6 @@
 ---
 - name: Use Variable
-  hosts: target-01
+  hosts: target_01
   vars:
     nameserver: 8.8.8.8
   tasks:
